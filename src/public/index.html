@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Jekyll v4.1.1" />
+    <title>Calculadora de IMC</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/jquery.toast.css" />
+    <!-- animation CSS -->
+    <link href="assets/css/animate.css" rel="stylesheet" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="py-5 text-center">
+        <h2>Calculadora de IMC</h2>
+        <p class="lead">
+          Debes ingresar tus datos personales para que el profesor pueda
+          calcular su Índice de Masa Corporal
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-10">
+          <h4 class="mb-3">Datos Personales</h4>
+          <form class="needs-validation" novalidate id="form-1" name="form-1">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nombres</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">Ingrese sus nombres.</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Apellidos</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">Ingrese sus apellidos.</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Colegio</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="school"
+                  name="school"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">
+                  Ingrese su establecimiento educacional.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Curso</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="curse"
+                  name="curse"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">Ingrese su curso.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="phone">Teléfono</label>
+              <input
+                type="number"
+                class="form-control"
+                id="phone"
+                name="phone"
+                placeholder="56935626565"
+                required
+              />
+              <div class="invalid-feedback">Ingrese su teléfono.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="gender">Género</label>
+              <select
+                class="custom-select d-block w-100"
+                id="gender"
+                name="gender"
+                required
+              >
+                <option value="" disabled selected>
+                  Selecciona una opción
+                </option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+              </select>
+              <div class="invalid-feedback">Seleccione su género.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="age">Edad</label>
+              <input
+                type="number"
+                class="form-control"
+                id="age"
+                name="age"
+                placeholder="5"
+                required
+              />
+              <div class="invalid-feedback">Ingrese su edad.</div>
+            </div>
+            <div class="mb-3">
+              <label for="weight"
+                >Peso <span class="text-muted">(kg)</span></label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="weight"
+                name="weight"
+                placeholder="30"
+                required
+              />
+              <div class="invalid-feedback">
+                Ingrese su peso ya que es importante para calcular el IMC.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="height="
+                >Altura <span class="text-muted">(cm)</span></label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="height"
+                name="height"
+                placeholder="120"
+                required
+              />
+              <div class="invalid-feedback">
+                Ingrese su altura en centimetros ya que es importante para
+                calcular el IMC.
+              </div>
+            </div>
+            <hr class="mb-4" />
+            <button class="btn btn-primary btn-lg btn-block" type="submit">
+              Enviar Información
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2020 Nataly Gonzalez Sepulveda</p>
+      </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>',
+        );
+    </script>
+    <script src="../assets/js/jquery.toast.js"></script>
+    <script src="../assets/js/json.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../assets/js/form-validation.js"></script>
+  </body>
+</html>
